@@ -1,0 +1,67 @@
+*** Code Flow ***
+
+Local Developer's Repository, branch main
+↓ (A.)
+Private Developer's Repository, branch main
+↓ (B.)
+Private Developer's Repository, branch toFork
+↓ (C.)
+Public  Developer's Repository, branch toFork
+↓ (D.)
+User's              Repository, branch toFork
+
+*** Instructions (Ongoing, For The Developer) ***
+
+A. In the terminal: 
+      git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
+B. In the terminal, the tests run and git status is clean:
+      git checkout toFork; git merge --squash main; git push; git checkout main
+C. In the terminal, run 
+      git checkout toFork; git push public_repo; git checkout main
+
+*** Instructions (Ongoing, For The User) ***
+
+D. In the browser, to get the latest updates,
+         - navigate to https://github.com/<user account name>/<forked repo name>, 
+         - press "Fetch Upstream" (this button is under the green Code button), 
+         - to confirm, press "Fetch and merge" in the menu that will appear.
+
+*** Developer Set-Up ***
+
+**  Private Developer's Repository **
+
+1.1. - 1.5. is done using github web interface
+
+1.1. create a private repository
+1.2. add .gitignore
+1.3. open the top folder, select all files and folders in it, and drag and drop.
+1.4. commit. This will create a branch called main, it will be a default branch.
+1.5. create a branch ToFork from main
+
+1.6. and 1.7. are done in the terminal, in order to get a local copy of the repo on your machine
+
+1.6. cd to an empty folder
+1.7. From the terminal: git clone https://github.com/<dev account name>/<private repo name>.git
+
+**  Public Developer's Repository **
+
+2.1. - 2.6. is done using github web interface
+
+2.1. temporarily make your private repository public
+2.2. create a public repository, clone the private repo's contents:
+         "Your old repository’s clone URL": https://github.com/<dev account name>/<private repo name>.git
+2.4. Once complete, make your private repository private again
+2.5. go to <public repo>->Settings -> Branches, press double arrow button, make toFork your default branch.
+2.6. go to https://github.com/<dev account name>/<public repo name>/branches/all, delete main branch 
+
+In the terminal:
+
+2.7. cd to the folder that contains the local copy of your repo
+2.8. run git remote add public_repo https://github.com/<dev account name>/<public repo name>.git
+
+*** User Set-Up ***
+
+** User's Repository (Private or Private) **
+
+3.1. In the browser, open https://github.com/<dev account name>/<public repo name>;
+3.2. Press the "Fork" button in the top right corner of the screen.
