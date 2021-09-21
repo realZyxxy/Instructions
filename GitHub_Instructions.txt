@@ -1,16 +1,17 @@
 *** Code Flow ***
 
-Local Developer's Repository, branch main
+Local     Developer's Repository, branch main
 ↓ (A.)
-Private Developer's Repository, branch main
+#Private# Developer's Repository, branch main
 ↓ (B.)
-Private Developer's Repository, branch toFork
+Private   Developer's Repository, branch #toFork#
 ↓ (C.)
-Public  Developer's Repository, branch toFork
+#Public#  Developer's Repository, branch toFork
 ↓ (D.)
-User's              Repository, branch toFork
+#User's#              Repository, branch toFork
 
-*** Instructions (Ongoing, For The Developer) ***
+*** Instructions (Ongoing, Once The Set-Up Is Complete) ***
+** Instructions For The Developer **
 
 A. In the terminal: 
       git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
@@ -19,7 +20,7 @@ B. In the terminal, the tests run and git status is clean:
 C. In the terminal, run 
       git checkout toFork; git push public_repo; git checkout main
 
-*** Instructions (Ongoing, For The User) ***
+** Instructions For The User **
 
 D. In the browser, to get the latest updates,
          - navigate to https://github.com/<user account name>/<forked repo name>, 
