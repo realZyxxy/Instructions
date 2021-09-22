@@ -22,7 +22,7 @@ A. When you have completed a feature or when you need to back up or to transfer 
    Alternatively, you can use GitHub Desktop to do this (but make sure you are using correct branch).
 
 B. When the the tests run and git status is clean, and you have commited it all into main, merge main branch (remote branch, not the local one) -> toFork:
-      git checkout toFork; git merge --squash main; git push; git checkout main
+      git checkout toFork; git merge main --squash; git commit -m "<nice message>";  git push; git checkout main
 
 C. When toFork on <private repo name> is satisfactory (whatever it means in your case)
       git checkout toFork; git push public_repo; git checkout main
