@@ -18,8 +18,12 @@ Before running these commands, you will need to cd into the folder that contains
 
 A. When you have completed a feature or when you need to back up or to transfer to another machine:
       git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
+
+   Alternatively, you can use GitHub Desktop to do this (but make sure you are using correct branch).
+
 B. When the the tests run and git status is clean, and you have commited it all into main, merge main branch (remote branch, not the local one) -> toFork:
       git checkout toFork; git merge --squash main; git push; git checkout main
+
 C. When toFork on <private repo name> is satisfactory (whatever it means in your case)
       git checkout toFork; git push public_repo; git checkout main
 
@@ -32,38 +36,28 @@ D. In the browser, to get the latest updates (it is advised to commit all local 
 
 *** Developer Set-Up ***
 
-**  Private Developer's Repository **
+**  Using github.com Web Interface **
 
-1.1. - 1.5. is done using github web interface
+1.1. Create a PRIVATE repository, add .gitignore, a license and a README file if relevant.
+1.2. commit. This will create a repository with a single branch called main, it will be a default branch on <private repo name>.
+1.3. create a branch ToFork using a drop-down menu that will appear when you press on the name of branch main.
 
-1.1. create a private repository
-1.2. add .gitignore
-1.3. open the top folder, select all files and folders in it, and drag and drop.
-1.4. commit. This will create a branch called main, it will be a default branch.
-1.5. create a branch ToFork from main
+1.4. Create a PUBLIC repository, add .gitignore, a license and a README file if relevant.
+1.5. <public repo>->Settings -> Branches, rename main branch into toFork branch.
 
-1.6. and 1.7. are done in the terminal, in order to get a local copy of the repo on your machine
+**  Using terminal on your machine **
 
-1.6. cd to a folder that will contain the local copy of the repository.
-1.7. From the terminal, run 
+2.1. Navigate (cd) to a folder that will contain the local copy of the repository.
+2.2. From the terminal, run 
         git clone https://github.com/<dev account name>/<private repo name>.git
      This will create a folder called <private repo name> that contains the contents of your repository.
-
-**  Public Developer's Repository **
-
-2.1. - 2.6. is done using github web interface
-
-2.1. temporarily make your private repository public
-2.2. create a public repository, clone the private repo's contents:
-         "Your old repository’s clone URL": https://github.com/<dev account name>/<private repo name>.git
-2.4. Once complete, make your private repository private again
-2.5. go to <public repo>->Settings -> Branches, press double arrow button, make toFork your default branch.
-2.6. go to https://github.com/<dev account name>/<public repo name>/branches/all, delete main branch 
-
-In the terminal:
-
-2.7. cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
-2.8. run git remote add public_repo https://github.com/<dev account name>/<public repo name>.git
+     You can now add more files, commit etc.
+2.3. cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
+2.4. To be able to push your changes into the public repository in the futue, run 
+        git remote add public_repo https://github.com/<dev account name>/<public repo name>.git
+2.5. Run 
+        gut remote -v
+     to make sure that public_repo is among your origins.
 
 *** User Set-Up ***
 
