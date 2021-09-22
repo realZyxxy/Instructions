@@ -18,7 +18,7 @@ Before running these commands, you will need to cd into the folder that contains
 
 A. When you have completed a feature or when you need to back up or to transfer to another machine:
       git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
-B. When the the tests run and git status is clean:
+B. When the the tests run and git status is clean, and you have commited it all into main, merge main branch (remote branch, not the local one) -> toFork:
       git checkout toFork; git merge --squash main; git push; git checkout main
 C. When toFork on <private repo name> is satisfactory (whatever it means in your case)
       git checkout toFork; git push public_repo; git checkout main
@@ -28,7 +28,7 @@ C. When toFork on <private repo name> is satisfactory (whatever it means in your
 D. In the browser, to get the latest updates (it is advised to commit all local changes before you continue):
          - navigate to https://github.com/<user account name>/<forked repo name>, 
          - press "Fetch Upstream" (this button is under the green Code button), 
-         - to confirm, press "Fetch and merge" in the menu that will appear.
+         - to confirm, press "Fetch and merge" in the menu that will appear just underneath.
 
 *** Developer Set-Up ***
 
