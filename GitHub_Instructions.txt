@@ -13,16 +13,19 @@ Private   Developer's Repository, branch #toFork#
 *** Instructions (Ongoing, Once The Set-Up Is Complete) ***
 ** Instructions For The Developer **
 
-A. In the terminal: 
+All of below is done in the terminal.
+Before running these commands, you will need to cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
+
+A. When you have completed a feature or when you need to back up or to transfer to another machine:
       git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
-B. In the terminal, the tests run and git status is clean:
+B. When the the tests run and git status is clean:
       git checkout toFork; git merge --squash main; git push; git checkout main
-C. In the terminal, run 
+C. When toFork on <private repo name> is satisfactory (whatever it means in your case)
       git checkout toFork; git push public_repo; git checkout main
 
 ** Instructions For The User **
 
-D. In the browser, to get the latest updates,
+D. In the browser, to get the latest updates (it is advised to commit all local changes before you continue):
          - navigate to https://github.com/<user account name>/<forked repo name>, 
          - press "Fetch Upstream" (this button is under the green Code button), 
          - to confirm, press "Fetch and merge" in the menu that will appear.
@@ -41,8 +44,10 @@ D. In the browser, to get the latest updates,
 
 1.6. and 1.7. are done in the terminal, in order to get a local copy of the repo on your machine
 
-1.6. cd to an empty folder
-1.7. From the terminal: git clone https://github.com/<dev account name>/<private repo name>.git
+1.6. cd to a folder that will contain the local copy of the repository.
+1.7. From the terminal, run 
+        git clone https://github.com/<dev account name>/<private repo name>.git
+     This will create a folder called <private repo name> that contains the contents of your repository.
 
 **  Public Developer's Repository **
 
@@ -57,7 +62,7 @@ D. In the browser, to get the latest updates,
 
 In the terminal:
 
-2.7. cd to the folder that contains the local copy of your repo
+2.7. cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
 2.8. run git remote add public_repo https://github.com/<dev account name>/<public repo name>.git
 
 *** User Set-Up ***
