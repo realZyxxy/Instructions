@@ -61,7 +61,7 @@ D. In the browser, to get the latest updates (it is advised to commit all local 
         git clone https://github.com/<dev account name>/<private repo name>.git
      This will create a folder called <private repo name> that contains the contents of your repository.
      You can now add more files, commit etc.
-2.3. cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
+2.3. cd into the folder that you have just created by running git clone.
 2.4. To be able to push your changes into the public repository in the futue, run 
         git remote add public_repo https://github.com/<dev account name>/<public repo name>.git
 2.5. Run 
