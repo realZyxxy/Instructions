@@ -14,12 +14,17 @@ Private   Developer's Repository, branch #toFork#
 ** Instructions For The Developer **
 
 All of below is done in the terminal.
-Before running these commands, you will need to cd into the folder that contains the local copy of your repo. It is probably called <private repo name>.
+Before running these commands, you will need to cd into the folder that contains the local copy of your repo. 
+It is probably called <private repo name>.
 
 A. When you have completed a feature or when you need to back up or to transfer to another machine:
-      git checkout main; git status;  ... git add <new files>; ... git commit -a -m "<nice message>"; git push
+      git checkout main; git status;  
+  Depending on the status ou might need to run    
+      git add <new files>; 
+  Then run
+      git commit -a -m "<nice message>"; git push
 
-   Alternatively, you can use GitHub Desktop to do this (but make sure you are using correct branch).
+   Alternatively, you can use **GitHub Desktop** to do this (but make sure you are using correct branch).
 
 B. When the the tests run and git status is clean, and you have commited it all into main, merge main branch (remote branch, not the local one) -> toFork:
       git checkout toFork; git merge main --squash; git commit -m "<nice message>";  git push; git checkout main
@@ -38,21 +43,29 @@ D. In the browser, to get the latest updates (it is advised to commit all local 
 
 **  Using github.com Web Interface **
 
+github.com is not intuitive, but it seems to be less error-prone than the terminal for this type of manipulations
+
 1.1. Create a PRIVATE repository, add .gitignore, a license and a README file if relevant.
-     Make it public for now (this is needed in step 1.4., to be able to use it as a source of the code).
+     Make it **public** for now (this is needed in step 1.4., to be able to use it as a source of the code).
      You will change its visibility to private in step 1.7.
 1.2. Press the commit button. This will create a repository with a single branch called main, it will be a default branch on <private repo name>.
 1.3. Create a branch ToFork using a drop-down menu that will appear when you press on the name of branch main.
 
 1.4. Create a PUBLIC repository.
      DO NOT ADD .gitignore, a license and a README file (you can always do it later).
-     Use https://github.com/<dev account name>/<private repo name>.git as a source of your code.
-1.5. Go to https://github.com/realZyxxy/<dev account name>/<public repo name>/branches, 
-     switch the default branch from main to toFork.
-1.6. Go to https://github.com/<dev account name>/<public repo name>/branches, 
-     delete main branch.
-
+     Use https://github.com/<dev account name>/<private repo name>.git as a source of your code (the last option on the page that github will will show).
+     You don't add much code by doing this. 
+     However, using your private repository as a source will allow pushes into the public repo from the private repo in the future.
+     
+Now we need to get sorted the branches. At the present, your public repository has two branches, main (default) and toFork. 
+After 1.6, there will be only one branch, toFork, left. To achieve this:
+1.5. Switch the default branch from main to toFork.
+     You can do it on https://github.com/<dev account name>/<public repo name>/settings/branches.
+1.6. Delete main branch.
+     You can do it on https://github.com/<dev account name>/<public repo name>/branches.
+     
 1.7. Go back to the PRIVATE repository, and make it private, as it should be.
+     To do it, go to https://github.com/<dev account name>/<private repo name>/settings, scroll to the bottom of the page, and update the Change repository visibility setting.
 
 **  Using terminal on your machine **
 
