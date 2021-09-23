@@ -42,13 +42,15 @@ D. In the browser, to get the latest updates (it is advised to commit all local 
      Make it public for now (this is needed in step 1.4., to be able to use it as a source of the code).
      You will change its visibility to private in step 1.7.
 1.2. Press the commit button. This will create a repository with a single branch called main, it will be a default branch on <private repo name>.
-1.3. create a branch ToFork using a drop-down menu that will appear when you press on the name of branch main.
+1.3. Create a branch ToFork using a drop-down menu that will appear when you press on the name of branch main.
 
 1.4. Create a PUBLIC repository.
      DO NOT ADD .gitignore, a license and a README file (you can always do it later).
      Use https://github.com/<dev account name>/<private repo name>.git as a source of your code.
-1.5. <public repo>->Settings -> Branches, switch the default branch from main to toFork.
-1.6. Go to https://github.com/<dev account name>/<private repo name>/branches, and delete main branch.
+1.5. Go to https://github.com/realZyxxy/<dev account name>/<public repo name>/branches, 
+     switch the default branch from main to toFork.
+1.6. Go to https://github.com/<dev account name>/<public repo name>/branches, 
+     delete main branch.
 
 1.7. Go back to the PRIVATE repository, and make it private, as it should be.
 
